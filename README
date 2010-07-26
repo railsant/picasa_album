@@ -5,13 +5,15 @@ PicasaAlbum is a API Wrapper for Google Picasa.
 
 Setup Procedure:
 1. ./script/plugin install git://github.com/inspiresynergy/picasa_album.git
-2. In the model that links to Picasa, write:
+2. Add picasa_account.rb into 'config/initializers which contains:
+      PicasaAlbum::Picasa.config(:username => 'username', :password => 'password')
+3. In the model that links to Picasa, write:
       include 'PicasaAlbum'
-3. Configure the plugin by using the following methods:
+4. Configure the plugin by using the following methods:
       set_picasa_album_id
       set_picasa_album_title
       set_picasa_album_summary
       set_picasa_album_location
-4. The model can create album through object.create_album and access photos through object.photos
+5. The model can create album through object.create_album and access photos through object.photos
 
 Copyright (c) 2010 Inspire Synergy Limited, released under the MIT license
